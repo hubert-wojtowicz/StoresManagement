@@ -7,7 +7,7 @@ using System.Web;
 
 namespace StoresManagement.Migrations.EntityConfigurations
 {
-    public class EntityConfiguration : EntityTypeConfiguration<Entity>
+    public class ContactConfiguration : EntityTypeConfiguration<Contact>
     {
     }
 }

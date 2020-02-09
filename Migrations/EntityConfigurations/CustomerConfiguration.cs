@@ -13,8 +13,11 @@ namespace StoresManagement.Migrations.EntityConfigurations
             .HasForeignKey(c => c.EntityId)
             .WillCascadeOnDelete(false);
 
-            //// Contact 1 x 1 Customer (Optional)
-            //HasOptional<Contact>(c => c.Contact)
+            // Contact 1 x 1 Customer (Optional)
+            // A customer MAY have registered ONLY ONE contact
+            //HasOptional(s => s.Contact).WithOptionalPrincipal().Map(c => c.MapKey("ContactId")); //.HasForeignKey(s => s.ContactId);
+
+            //HasOptional(c => c.Contact)
             //.WithOptionalPrincipal(co => co.Customer)
             //.Map(c => c.MapKey("ContactId"))
             //.WillCascadeOnDelete(false);

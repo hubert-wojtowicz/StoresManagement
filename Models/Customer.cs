@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -22,8 +23,8 @@ namespace StoresManagement.Models
         [Display(Name = "Customer Name")]
         public string Name { get; set; }
 
-        // [ForeignKey("Contact")]
-        public int ContactId { get; set; }
+        //[ForeignKey("Contact")]
+        //public int ContactId { get; set; }
 
         //public virtual Contact Contact { get; set; }
     }

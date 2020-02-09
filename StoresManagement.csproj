@@ -189,13 +189,19 @@
     <Compile Include="Migrations\202002092001589_AddCustomersTable.Designer.cs">
       <DependentUpon>202002092001589_AddCustomersTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002092031492_AddContactsTable.cs" />
+    <Compile Include="Migrations\202002092031492_AddContactsTable.Designer.cs">
+      <DependentUpon>202002092031492_AddContactsTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\EntityConfigurations\BranchConfiguration.cs" />
+    <Compile Include="Migrations\EntityConfigurations\ContactConfiguration.cs" />
     <Compile Include="Migrations\EntityConfigurations\CustomerConfiguration.cs" />
     <Compile Include="Migrations\EntityConfigurations\EntityConfiguration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Branch.cs" />
+    <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Entity.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -288,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002092001589_AddCustomersTable.resx">
       <DependentUpon>202002092001589_AddCustomersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002092031492_AddContactsTable.resx">
+      <DependentUpon>202002092031492_AddContactsTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

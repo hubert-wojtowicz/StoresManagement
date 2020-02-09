@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
+using StoresManagement.Migrations.EntityConfigurations;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -11,8 +12,8 @@ namespace StoresManagement.Models
     {
         public DbSet<Entity> Entities { get; set; }
         public DbSet<Branch> Branches { get; set; }
-        //public DbSet<Customer> Customers { get; set; }
-        //public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
