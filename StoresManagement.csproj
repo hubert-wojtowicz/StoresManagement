@@ -193,6 +193,14 @@
     <Compile Include="Migrations\202002092031492_AddContactsTable.Designer.cs">
       <DependentUpon>202002092031492_AddContactsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002092115210_AddConfigurationFiles.cs" />
+    <Compile Include="Migrations\202002092115210_AddConfigurationFiles.Designer.cs">
+      <DependentUpon>202002092115210_AddConfigurationFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002092130050_TableRealationships.cs" />
+    <Compile Include="Migrations\202002092130050_TableRealationships.Designer.cs">
+      <DependentUpon>202002092130050_TableRealationships.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\EntityConfigurations\BranchConfiguration.cs" />
     <Compile Include="Migrations\EntityConfigurations\ContactConfiguration.cs" />
@@ -297,6 +305,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002092031492_AddContactsTable.resx">
       <DependentUpon>202002092031492_AddContactsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002092115210_AddConfigurationFiles.resx">
+      <DependentUpon>202002092115210_AddConfigurationFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002092130050_TableRealationships.resx">
+      <DependentUpon>202002092130050_TableRealationships.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

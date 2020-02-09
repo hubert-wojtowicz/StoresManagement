@@ -25,12 +25,14 @@ namespace StoresManagement.Models
             return new ApplicationDbContext();
         }
 
-        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Configurations.Add(new EntityConfiguration());
-        //    modelBuilder.Configurations.Add(new BranchConfiguration());
-        //    modelBuilder.Configurations.Add(new CustomerConfiguration());
-        //    modelBuilder.Configurations.Add(new ContactConfiguration());
-        //}
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new EntityConfiguration());
+            modelBuilder.Configurations.Add(new BranchConfiguration());
+            modelBuilder.Configurations.Add(new CustomerConfiguration());
+            modelBuilder.Configurations.Add(new ContactConfiguration());
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

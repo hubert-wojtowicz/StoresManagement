@@ -15,6 +15,13 @@ namespace StoresManagement.Migrations.EntityConfigurations
 
             // Contact 1 x 1 Customer (Optional)
             // A customer MAY have registered ONLY ONE contact
+
+            HasRequired(t => t.Contact)
+            .WithOptional(t => t.Customer);
+            // .Map(c => c.MapKey("ContactId"));
+
+            //HasKey(t => t.Id);
+
             //HasOptional(s => s.Contact).WithOptionalPrincipal().Map(c => c.MapKey("ContactId")); //.HasForeignKey(s => s.ContactId);
 
             //HasOptional(c => c.Contact)
