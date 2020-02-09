@@ -177,8 +177,14 @@
     <Compile Include="Migrations\202002091828278_InitialModel.Designer.cs">
       <DependentUpon>202002091828278_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002091943305_AddEntitiesTable.cs" />
+    <Compile Include="Migrations\202002091943305_AddEntitiesTable.Designer.cs">
+      <DependentUpon>202002091943305_AddEntitiesTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Entity.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -260,6 +266,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202002091828278_InitialModel.resx">
       <DependentUpon>202002091828278_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002091943305_AddEntitiesTable.resx">
+      <DependentUpon>202002091943305_AddEntitiesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
