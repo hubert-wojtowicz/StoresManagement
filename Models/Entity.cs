@@ -12,5 +12,9 @@ namespace StoresManagement.Models
 
         [Display(Name = "Entity Name")]
         public string EntityName { get; set; }
+
+        public ICollection<Branch> Branches { get; set; }
+
+        //public ICollection<Customer> Customers { get; set; }
     }
 }

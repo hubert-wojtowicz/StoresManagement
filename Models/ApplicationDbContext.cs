@@ -10,7 +10,7 @@ namespace StoresManagement.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Entity> Entities { get; set; }
-        //public DbSet<Branch> Branches { get; set; }
+        public DbSet<Branch> Branches { get; set; }
         //public DbSet<Customer> Customers { get; set; }
         //public DbSet<Contact> Contacts { get; set; }
 
