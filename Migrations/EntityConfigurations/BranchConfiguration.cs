@@ -7,9 +7,6 @@ namespace StoresManagement.Migrations.EntityConfigurations
     {
         public BranchConfiguration()
         {
-            Property(x => x.Name)
-                .HasMaxLength(50);
-
             HasRequired(b => b.Entity)
             .WithMany(e => e.Branches)
             .HasForeignKey(b => b.EntityId)

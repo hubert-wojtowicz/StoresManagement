@@ -7,9 +7,6 @@ namespace StoresManagement.Migrations.EntityConfigurations
     {
         public CustomerConfiguration()
         {
-            Property(x => x.Name)
-                .HasMaxLength(50);
-
             HasRequired(b => b.Entity)
             .WithMany(e => e.Customers)
             .HasForeignKey(b => b.EntityId)
