@@ -19,16 +19,16 @@ namespace StoresManagement.Models
 
         public string Name { get; set; }
 
-        public Decimal Price { get; set; }
+        public Decimal? Price { get; set; }
 
-        public DateTime ExpiryDate { get; set; }
+        public DateTime? ExpiryDate { get; set; }
 
-        public Decimal Weight { get; set; }
+        public Decimal? Weight { get; set; }
 
-        public Decimal Width { get; set; }
+        public Decimal? Width { get; set; }
 
-        public Decimal Height { get; set; }
+        public Decimal? Height { get; set; }
 
-        public int QuantityInStock { get; set; }
+        public int? QuantityInStock { get; set; }
     }
 }
