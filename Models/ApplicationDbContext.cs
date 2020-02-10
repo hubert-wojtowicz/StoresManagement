@@ -16,6 +16,7 @@ namespace StoresManagement.Models
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Purchase> Purchases { get; set; }
+        public DbSet<PurchaseItem> PurchaseItems { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
@@ -35,6 +36,7 @@ namespace StoresManagement.Models
             modelBuilder.Configurations.Add(new ContactConfiguration());
             modelBuilder.Configurations.Add(new ProductConfiguration());
             modelBuilder.Configurations.Add(new PurchaseConfiguration());
+            modelBuilder.Configurations.Add(new PurchaseItemConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }

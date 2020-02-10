@@ -205,6 +205,10 @@
     <Compile Include="Migrations\202002102034511_AddPurchasesTable.Designer.cs">
       <DependentUpon>202002102034511_AddPurchasesTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002102050534_AddPurchaseItemsTable.cs" />
+    <Compile Include="Migrations\202002102050534_AddPurchaseItemsTable.Designer.cs">
+      <DependentUpon>202002102050534_AddPurchaseItemsTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\EntityConfigurations\BranchConfiguration.cs" />
     <Compile Include="Migrations\EntityConfigurations\ContactConfiguration.cs" />
@@ -212,6 +216,7 @@
     <Compile Include="Migrations\EntityConfigurations\EntityConfiguration.cs" />
     <Compile Include="Migrations\EntityConfigurations\ProductConfiguration.cs" />
     <Compile Include="Migrations\EntityConfigurations\PurchaseConfiguration.cs" />
+    <Compile Include="Migrations\EntityConfigurations\PurchaseItemConfiguration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Branch.cs" />
@@ -222,6 +227,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Purchase.cs" />
+    <Compile Include="Models\PurchaseItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -322,6 +328,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002102034511_AddPurchasesTable.resx">
       <DependentUpon>202002102034511_AddPurchasesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002102050534_AddPurchaseItemsTable.resx">
+      <DependentUpon>202002102050534_AddPurchaseItemsTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

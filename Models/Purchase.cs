@@ -10,7 +10,7 @@ namespace StoresManagement.Models
     {
         public int EntityId { get; set; }
 
-        [Display(Name = "Entity Id")]
+        [Display(Name = "Branch Id")]
         public int BranchId { get; set; }
 
         public virtual Branch Branch { get; set; }
@@ -21,7 +21,11 @@ namespace StoresManagement.Models
         public virtual Customer Customer { get; set; }
 
         public int Id { get; set; }
+
         public Decimal? Discount { get; set; }
+
         public Decimal? Total { get; set; }
+
+        public ICollection<PurchaseItem> PurchaseItems { get; set; }
     }
 }

@@ -30,5 +30,7 @@ namespace StoresManagement.Models
         public Decimal? Height { get; set; }
 
         public int? QuantityInStock { get; set; }
+
+        public virtual PurchaseItem PurchaseItem { get; set; }
     }
 }
