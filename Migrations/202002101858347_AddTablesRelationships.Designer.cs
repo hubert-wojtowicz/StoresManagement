@@ -7,13 +7,13 @@ namespace StoresManagement.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AddConfigurationFiles : IMigrationMetadata
+    public sealed partial class AddTablesRelationships : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddConfigurationFiles));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddTablesRelationships));
         
         string IMigrationMetadata.Id
         {
-            get { return "202002092115210_AddConfigurationFiles"; }
+            get { return "202002101858347_AddTablesRelationships"; }
         }
         
         string IMigrationMetadata.Source

@@ -7,27 +7,16 @@ namespace StoresManagement.Migrations.EntityConfigurations
     {
         public CustomerConfiguration()
         {
-            // Entity 1 x N Customers
-            HasRequired(c => c.Entity)
-            .WithMany(e => e.Customers)
-            .HasForeignKey(c => c.EntityId)
-            .WillCascadeOnDelete(false);
+            Property(x => x.Name)
+                .HasMaxLength(50);
 
-            // Contact 1 x 1 Customer (Optional)
-            // A customer MAY have registered ONLY ONE contact
+            HasRequired(b => b.Entity)
+            .WithMany(e => e.Customers)
+            .HasForeignKey(b => b.EntityId)
+            .WillCascadeOnDelete(false);
 
             HasRequired(t => t.Contact)
             .WithOptional(t => t.Customer);
-            // .Map(c => c.MapKey("ContactId"));
-
-            //HasKey(t => t.Id);
-
-            //HasOptional(s => s.Contact).WithOptionalPrincipal().Map(c => c.MapKey("ContactId")); //.HasForeignKey(s => s.ContactId);
-
-            //HasOptional(c => c.Contact)
-            //.WithOptionalPrincipal(co => co.Customer)
-            //.Map(c => c.MapKey("ContactId"))
-            //.WillCascadeOnDelete(false);
         }
     }
 }
