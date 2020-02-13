@@ -1,0 +1,115 @@
+﻿@model StoresManagement.Models.Contact
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Contact</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Branch.Identification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Branch.Identification)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.Identification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.Identification)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EntityId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EntityId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressCountry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressCountry)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressPostalCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressPostalCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressStreet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressStreet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressComplement)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressComplement)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

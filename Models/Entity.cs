@@ -8,13 +8,20 @@ namespace StoresManagement.Models
 {
     public class Entity
     {
+        public Entity()
+        {
+            Branches = new HashSet<Branch>();
+            Customers = new HashSet<Customer>();
+        }
+
+        [Display(Name = "Entity - Entity Id")]
         public int Id { get; set; }
 
-        [Display(Name = "Entity Name")]
+        [Display(Name = "Entity - Entity Name")]
         public string EntityName { get; set; }
 
-        public ICollection<Branch> Branches { get; set; }
+        public virtual ICollection<Branch> Branches { get; set; }
 
-        public ICollection<Customer> Customers { get; set; }
+        public virtual ICollection<Customer> Customers { get; set; }
     }
 }

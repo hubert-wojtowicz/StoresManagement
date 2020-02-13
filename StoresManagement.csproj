@@ -168,6 +168,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BranchesController.cs" />
+    <Compile Include="Controllers\ContactsController.cs" />
+    <Compile Include="Controllers\EntitiesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -208,6 +211,10 @@
     <Compile Include="Migrations\202002102050534_AddPurchaseItemsTable.cs" />
     <Compile Include="Migrations\202002102050534_AddPurchaseItemsTable.Designer.cs">
       <DependentUpon>202002102050534_AddPurchaseItemsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002132010409_Teste.cs" />
+    <Compile Include="Migrations\202002132010409_Teste.Designer.cs">
+      <DependentUpon>202002132010409_Teste.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\EntityConfigurations\BranchConfiguration.cs" />
@@ -287,6 +294,21 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Entities\Create.cshtml" />
+    <Content Include="Views\Entities\Delete.cshtml" />
+    <Content Include="Views\Entities\Details.cshtml" />
+    <Content Include="Views\Entities\Edit.cshtml" />
+    <Content Include="Views\Entities\Index.cshtml" />
+    <Content Include="Views\Contacts\Create.cshtml" />
+    <Content Include="Views\Contacts\Delete.cshtml" />
+    <Content Include="Views\Contacts\Details.cshtml" />
+    <Content Include="Views\Contacts\Edit.cshtml" />
+    <Content Include="Views\Contacts\Index.cshtml" />
+    <Content Include="Views\Branches\Create.cshtml" />
+    <Content Include="Views\Branches\Delete.cshtml" />
+    <Content Include="Views\Branches\Details.cshtml" />
+    <Content Include="Views\Branches\Edit.cshtml" />
+    <Content Include="Views\Branches\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -331,6 +353,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002102050534_AddPurchaseItemsTable.resx">
       <DependentUpon>202002102050534_AddPurchaseItemsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002132010409_Teste.resx">
+      <DependentUpon>202002132010409_Teste.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
