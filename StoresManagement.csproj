@@ -168,7 +168,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\BranchesController.cs" />
     <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\EntitiesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -180,41 +179,13 @@
     <Compile Include="Migrations\202002091828278_InitialModel.Designer.cs">
       <DependentUpon>202002091828278_InitialModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202002091943305_AddEntitiesTable.cs" />
-    <Compile Include="Migrations\202002091943305_AddEntitiesTable.Designer.cs">
-      <DependentUpon>202002091943305_AddEntitiesTable.cs</DependentUpon>
+    <Compile Include="Migrations\202002191800155_AddEntitiesTable.cs" />
+    <Compile Include="Migrations\202002191800155_AddEntitiesTable.Designer.cs">
+      <DependentUpon>202002191800155_AddEntitiesTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202002091956052_AddBranchesTable.cs" />
-    <Compile Include="Migrations\202002091956052_AddBranchesTable.Designer.cs">
-      <DependentUpon>202002091956052_AddBranchesTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202002092001589_AddCustomersTable.cs" />
-    <Compile Include="Migrations\202002092001589_AddCustomersTable.Designer.cs">
-      <DependentUpon>202002092001589_AddCustomersTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202002092031492_AddContactsTable.cs" />
-    <Compile Include="Migrations\202002092031492_AddContactsTable.Designer.cs">
-      <DependentUpon>202002092031492_AddContactsTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202002101858347_AddTablesRelationships.cs" />
-    <Compile Include="Migrations\202002101858347_AddTablesRelationships.Designer.cs">
-      <DependentUpon>202002101858347_AddTablesRelationships.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202002102006530_AddProductTable.cs" />
-    <Compile Include="Migrations\202002102006530_AddProductTable.Designer.cs">
-      <DependentUpon>202002102006530_AddProductTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202002102034511_AddPurchasesTable.cs" />
-    <Compile Include="Migrations\202002102034511_AddPurchasesTable.Designer.cs">
-      <DependentUpon>202002102034511_AddPurchasesTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202002102050534_AddPurchaseItemsTable.cs" />
-    <Compile Include="Migrations\202002102050534_AddPurchaseItemsTable.Designer.cs">
-      <DependentUpon>202002102050534_AddPurchaseItemsTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202002132010409_Teste.cs" />
-    <Compile Include="Migrations\202002132010409_Teste.Designer.cs">
-      <DependentUpon>202002132010409_Teste.cs</DependentUpon>
+    <Compile Include="Migrations\202002191816488_AddContactsTable.cs" />
+    <Compile Include="Migrations\202002191816488_AddContactsTable.Designer.cs">
+      <DependentUpon>202002191816488_AddContactsTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\EntityConfigurations\BranchConfiguration.cs" />
@@ -304,11 +275,6 @@
     <Content Include="Views\Contacts\Details.cshtml" />
     <Content Include="Views\Contacts\Edit.cshtml" />
     <Content Include="Views\Contacts\Index.cshtml" />
-    <Content Include="Views\Branches\Create.cshtml" />
-    <Content Include="Views\Branches\Delete.cshtml" />
-    <Content Include="Views\Branches\Details.cshtml" />
-    <Content Include="Views\Branches\Edit.cshtml" />
-    <Content Include="Views\Branches\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -330,32 +296,11 @@
     <EmbeddedResource Include="Migrations\202002091828278_InitialModel.resx">
       <DependentUpon>202002091828278_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002091943305_AddEntitiesTable.resx">
-      <DependentUpon>202002091943305_AddEntitiesTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202002191800155_AddEntitiesTable.resx">
+      <DependentUpon>202002191800155_AddEntitiesTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002091956052_AddBranchesTable.resx">
-      <DependentUpon>202002091956052_AddBranchesTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002092001589_AddCustomersTable.resx">
-      <DependentUpon>202002092001589_AddCustomersTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002092031492_AddContactsTable.resx">
-      <DependentUpon>202002092031492_AddContactsTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002101858347_AddTablesRelationships.resx">
-      <DependentUpon>202002101858347_AddTablesRelationships.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002102006530_AddProductTable.resx">
-      <DependentUpon>202002102006530_AddProductTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002102034511_AddPurchasesTable.resx">
-      <DependentUpon>202002102034511_AddPurchasesTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002102050534_AddPurchaseItemsTable.resx">
-      <DependentUpon>202002102050534_AddPurchaseItemsTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002132010409_Teste.resx">
-      <DependentUpon>202002132010409_Teste.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202002191816488_AddContactsTable.resx">
+      <DependentUpon>202002191816488_AddContactsTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

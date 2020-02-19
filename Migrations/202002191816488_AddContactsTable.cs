@@ -12,7 +12,7 @@ namespace StoresManagement.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        EntityId = c.Int(nullable: false),
+                        EntityId = c.Int(),
                         AddressCountry = c.String(),
                         AddressPostalCode = c.String(),
                         AddressState = c.String(),
@@ -25,14 +25,10 @@ namespace StoresManagement.Migrations
                     })
                 .PrimaryKey(t => t.Id);
             
-            DropColumn("dbo.Branches", "ContactId");
-            DropColumn("dbo.Customers", "ContactId");
         }
         
         public override void Down()
         {
-            AddColumn("dbo.Customers", "ContactId", c => c.Int(nullable: false));
-            AddColumn("dbo.Branches", "ContactId", c => c.Guid(nullable: false));
             DropTable("dbo.Contacts");
         }
     }

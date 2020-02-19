@@ -9,7 +9,7 @@ namespace StoresManagement.Models
     public class Contact
     {
         [Display(Name = "Contact - Entity Id")]
-        public int EntityId { get; set; }
+        public int? EntityId { get; set; }
 
         [Display(Name = "Contact - Entity Object")]
         public int Id { get; set; }
@@ -47,10 +47,10 @@ namespace StoresManagement.Models
         [Display(Name = "Contact - Email")]
         public string Email { get; set; }
 
-        //public int CustomerId { get; set; }
-        public virtual Customer Customer { get; set; }
+        ////public int CustomerId { get; set; }
+        //public virtual Customer Customer { get; set; }
 
-        //public int BranchId { get; set; }
-        public virtual Branch Branch { get; set; }
+        ////public int BranchId { get; set; }
+        //public virtual Branch Branch { get; set; }
     }
 }

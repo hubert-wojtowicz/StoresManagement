@@ -17,8 +17,7 @@ namespace StoresManagement.Controllers
         // GET: Contacts
         public ActionResult Index()
         {
-            var contacts = db.Contacts.Include(c => c.Branch).Include(c => c.Customer);
-            return View(contacts.ToList());
+            return View(db.Contacts.ToList());
         }
 
         // GET: Contacts/Details/5
@@ -39,8 +38,6 @@ namespace StoresManagement.Controllers
         // GET: Contacts/Create
         public ActionResult Create()
         {
-            ViewBag.Id = new SelectList(db.Branches, "Id", "Identification");
-            ViewBag.Id = new SelectList(db.Customers, "Id", "Identification");
             return View();
         }
 
@@ -58,8 +55,6 @@ namespace StoresManagement.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.Id = new SelectList(db.Branches, "Id", "Identification", contact.Id);
-            ViewBag.Id = new SelectList(db.Customers, "Id", "Identification", contact.Id);
             return View(contact);
         }
 
@@ -75,8 +70,6 @@ namespace StoresManagement.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.Id = new SelectList(db.Branches, "Id", "Identification", contact.Id);
-            ViewBag.Id = new SelectList(db.Customers, "Id", "Identification", contact.Id);
             return View(contact);
         }
 
@@ -93,8 +86,6 @@ namespace StoresManagement.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.Id = new SelectList(db.Branches, "Id", "Identification", contact.Id);
-            ViewBag.Id = new SelectList(db.Customers, "Id", "Identification", contact.Id);
             return View(contact);
         }
 

@@ -7,13 +7,20 @@ namespace StoresManagement.Migrations.EntityConfigurations
     {
         public CustomerConfiguration()
         {
-            HasRequired(b => b.Entity)
-            .WithMany(e => e.Customers)
-            .HasForeignKey(b => b.EntityId)
-            .WillCascadeOnDelete(false);
+            //HasRequired(b => b.Entity)
+            //.WithMany(e => e.Customers)
+            //.HasForeignKey(b => b.EntityId)
+            //.WillCascadeOnDelete(false);
 
-            HasRequired(t => t.Contact)
-            .WithOptional(t => t.Customer);
+            //HasOptional(c => c.Contact)
+            //    .WithRequired(con => con.Customer);
+
+            //HasRequired(t => t.Contact)
+            //.WithOptional(t => t.Customer);
+
+            //HasRequired(t => t.Contact)
+            //    .WithMany()
+            //    .HasForeignKey(t => t.ContactId);
         }
     }
 }

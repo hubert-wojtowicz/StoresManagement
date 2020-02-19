@@ -7,13 +7,13 @@ namespace StoresManagement.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AddContactsTable : IMigrationMetadata
+    public sealed partial class AddEntitiesTable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddContactsTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddEntitiesTable));
         
         string IMigrationMetadata.Id
         {
-            get { return "202002092031492_AddContactsTable"; }
+            get { return "202002191800155_AddEntitiesTable"; }
         }
         
         string IMigrationMetadata.Source
