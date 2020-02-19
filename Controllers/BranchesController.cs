@@ -45,16 +45,22 @@ namespace StoresManagement.Controllers
         }
 
         // POST: Branches/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,EntityId,Identification,Name,ContactId")] Branch branch)
+        //  public ActionResult Create([Bind(Include = "Id,EntityId,Identification,Name,ContactId")] Branch branch)
+        public ActionResult Create(Branch branch)
         {
             if (ModelState.IsValid)
             {
+                branch.Contact.EntityId = branch.EntityId;
+
+                db.Contacts.Add(branch.Contact);
                 db.Branches.Add(branch);
+
                 db.SaveChanges();
+
                 return RedirectToAction("Index");
             }
 
@@ -81,7 +87,7 @@ namespace StoresManagement.Controllers
         }
 
         // POST: Branches/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
