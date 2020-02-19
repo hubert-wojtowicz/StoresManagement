@@ -1,0 +1,51 @@
+﻿@model StoresManagement.Models.Branch
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Branch</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Contact.AddressCountry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contact.AddressCountry)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Entity.EntityName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Entity.EntityName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Identification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Identification)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

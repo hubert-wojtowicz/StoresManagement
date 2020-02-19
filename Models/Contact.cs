@@ -51,6 +51,6 @@ namespace StoresManagement.Models
         //public virtual Customer Customer { get; set; }
 
         ////public int BranchId { get; set; }
-        //public virtual Branch Branch { get; set; }
+        public virtual Branch Branch { get; set; }
     }
 }

@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BranchesController.cs" />
     <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\EntitiesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -186,6 +187,14 @@
     <Compile Include="Migrations\202002191816488_AddContactsTable.cs" />
     <Compile Include="Migrations\202002191816488_AddContactsTable.Designer.cs">
       <DependentUpon>202002191816488_AddContactsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002191826158_AddBranchesTable.cs" />
+    <Compile Include="Migrations\202002191826158_AddBranchesTable.Designer.cs">
+      <DependentUpon>202002191826158_AddBranchesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002191839573_AddBranchesxContactsRelationship.cs" />
+    <Compile Include="Migrations\202002191839573_AddBranchesxContactsRelationship.Designer.cs">
+      <DependentUpon>202002191839573_AddBranchesxContactsRelationship.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\EntityConfigurations\BranchConfiguration.cs" />
@@ -275,6 +284,11 @@
     <Content Include="Views\Contacts\Details.cshtml" />
     <Content Include="Views\Contacts\Edit.cshtml" />
     <Content Include="Views\Contacts\Index.cshtml" />
+    <Content Include="Views\Branches\Create.cshtml" />
+    <Content Include="Views\Branches\Delete.cshtml" />
+    <Content Include="Views\Branches\Details.cshtml" />
+    <Content Include="Views\Branches\Edit.cshtml" />
+    <Content Include="Views\Branches\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -301,6 +315,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002191816488_AddContactsTable.resx">
       <DependentUpon>202002191816488_AddContactsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002191826158_AddBranchesTable.resx">
+      <DependentUpon>202002191826158_AddBranchesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002191839573_AddBranchesxContactsRelationship.resx">
+      <DependentUpon>202002191839573_AddBranchesxContactsRelationship.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

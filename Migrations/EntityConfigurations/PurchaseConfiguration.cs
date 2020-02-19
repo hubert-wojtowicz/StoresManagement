@@ -7,15 +7,15 @@ namespace StoresManagement.Migrations.EntityConfigurations
     {
         public PurchaseConfiguration()
         {
-            HasRequired(c => c.Branch)
-            .WithMany(b => b.Purchases)
-            .HasForeignKey(c => c.BranchId)
-            .WillCascadeOnDelete(false);
+            //HasRequired(c => c.Branch)
+            //.WithMany(b => b.Purchases)
+            //.HasForeignKey(c => c.BranchId)
+            //.WillCascadeOnDelete(false);
 
-            HasRequired(c => c.Customer)
-            .WithMany(b => b.Purchases)
-            .HasForeignKey(c => c.CustomerId)
-            .WillCascadeOnDelete(false);
+            //HasRequired(c => c.Customer)
+            //.WithMany(b => b.Purchases)
+            //.HasForeignKey(c => c.CustomerId)
+            //.WillCascadeOnDelete(false);
         }
     }
 }

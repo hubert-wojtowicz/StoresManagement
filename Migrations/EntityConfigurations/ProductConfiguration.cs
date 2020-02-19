@@ -7,10 +7,10 @@ namespace StoresManagement.Migrations.EntityConfigurations
     {
         public ProductConfiguration()
         {
-            HasRequired(c => c.Branch)
-            .WithMany(b => b.Products)
-            .HasForeignKey(c => c.BranchId)
-            .WillCascadeOnDelete(false);
+            //HasRequired(c => c.Branch)
+            //.WithMany(b => b.Products)
+            //.HasForeignKey(c => c.BranchId)
+            //.WillCascadeOnDelete(false);
         }
     }
 }

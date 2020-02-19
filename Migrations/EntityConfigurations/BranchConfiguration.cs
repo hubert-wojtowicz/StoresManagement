@@ -7,20 +7,21 @@ namespace StoresManagement.Migrations.EntityConfigurations
     {
         public BranchConfiguration()
         {
-            //HasRequired(b => b.Entity)
-            //.WithMany(e => e.Branches)
-            //.HasForeignKey(b => b.EntityId)
-            //.WillCascadeOnDelete(false);
+            HasRequired(b => b.Entity)
+            .WithMany(e => e.Branches)
+            .HasForeignKey(b => b.EntityId)
+            .WillCascadeOnDelete(false);
 
-            //HasOptional(b => b.Contact)
-            //    .WithRequired(con => con.Branch);
+            //HasRequired(b => b.Contact)
+            //    .WithOptional(con => con.Branch)
+            //    .Map(b => b.MapKey("ContactId");
 
             //HasRequired(t => t.Contact)
             //.WithOptional(t => t.Branch);
 
-            //HasRequired(t => t.Contact)
-            //    .WithMany()
-            //    .HasForeignKey(t => t.ContactId);
+            HasRequired(t => t.Contact)
+                .WithMany()
+                .HasForeignKey(t => t.ContactId);
         }
     }
 }

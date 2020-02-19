@@ -9,11 +9,11 @@ namespace StoresManagement.Models
 {
     public class Branch
     {
-        public Branch()
-        {
-            Products = new HashSet<Product>();
-            Purchases = new HashSet<Purchase>();
-        }
+        //public Branch()
+        //{
+        //    Products = new HashSet<Product>();
+        //    Purchases = new HashSet<Purchase>();
+        //}
 
         //[ForeignKey("Entity")]
         [Display(Name = "Branch - Entity Id")]
@@ -35,13 +35,13 @@ namespace StoresManagement.Models
         public string Name { get; set; }
 
         [Display(Name = "Branch - Contact Id")]
-        public int? ContactId { get; set; }
+        public int ContactId { get; set; }
 
         [Display(Name = "Branch - Contact Object")]
         public virtual Contact Contact { get; set; }
 
-        public virtual ICollection<Product> Products { get; set; }
+        //public virtual ICollection<Product> Products { get; set; }
 
-        public virtual ICollection<Purchase> Purchases { get; set; }
+        //public virtual ICollection<Purchase> Purchases { get; set; }
     }
 }
