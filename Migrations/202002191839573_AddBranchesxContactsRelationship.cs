@@ -8,20 +8,16 @@ namespace StoresManagement.Migrations
         public override void Up()
         {
             AddColumn("dbo.Branches", "ContactId", c => c.Int(nullable: false));
-            AddColumn("dbo.Contacts", "Branch_Id", c => c.Int());
+            AlterColumn("dbo.Contacts", "EntityId", c => c.Int(nullable: false));
             CreateIndex("dbo.Branches", "ContactId");
-            CreateIndex("dbo.Contacts", "Branch_Id");
-            AddForeignKey("dbo.Contacts", "Branch_Id", "dbo.Branches", "Id");
-            AddForeignKey("dbo.Branches", "ContactId", "dbo.Contacts", "Id", cascadeDelete: true);
+            AddForeignKey("dbo.Branches", "ContactId", "dbo.Contacts", "Id");
         }
         
         public override void Down()
         {
             DropForeignKey("dbo.Branches", "ContactId", "dbo.Contacts");
-            DropForeignKey("dbo.Contacts", "Branch_Id", "dbo.Branches");
-            DropIndex("dbo.Contacts", new[] { "Branch_Id" });
             DropIndex("dbo.Branches", new[] { "ContactId" });
-            DropColumn("dbo.Contacts", "Branch_Id");
+            AlterColumn("dbo.Contacts", "EntityId", c => c.Int());
             DropColumn("dbo.Branches", "ContactId");
         }
     }

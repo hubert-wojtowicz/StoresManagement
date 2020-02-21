@@ -23,6 +23,7 @@ namespace StoresManagement
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/bootstrap-spacelab.css",
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
         }

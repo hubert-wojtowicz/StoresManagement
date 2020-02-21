@@ -15,29 +15,22 @@ namespace StoresManagement.Models
         //    Purchases = new HashSet<Purchase>();
         //}
 
-        //[ForeignKey("Entity")]
-        [Display(Name = "Branch - Entity Id")]
         public int EntityId { get; set; }
 
-        [Display(Name = "Branch - Entity Object")]
         public virtual Entity Entity { get; set; }
 
-        [Display(Name = "Branch - Branch Id")]
         public int Id { get; set; }
 
-        [Display(Name = "Branch - Branch Identification")]
+        [Display(Name = "Branch Identification")]
         public string Identification { get; set; }
 
-        [Display(Name = "Branch - Branch Type")]
+        [Display(Name = "Branch Type")]
         public char? Type { get; set; }
 
-        [Display(Name = "Branch - Branch Name")]
+        [Display(Name = "Branch Name")]
         public string Name { get; set; }
 
-        [Display(Name = "Branch - Contact Id")]
-        public int ContactId { get; set; }
-
-        [Display(Name = "Branch - Contact Object")]
+        [Display(Name = "Contact Object")]
         public virtual Contact Contact { get; set; }
 
         //public virtual ICollection<Product> Products { get; set; }

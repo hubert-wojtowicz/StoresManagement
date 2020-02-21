@@ -14,10 +14,9 @@ namespace StoresManagement.Models
             //Customers = new HashSet<Customer>();
         }
 
-        [Display(Name = "Entity - Entity Id")]
         public int Id { get; set; }
 
-        [Display(Name = "Entity - Entity Name")]
+        [Display(Name = "Entity Name")]
         public string EntityName { get; set; }
 
         public virtual ICollection<Branch> Branches { get; set; }

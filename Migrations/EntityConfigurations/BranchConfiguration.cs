@@ -12,16 +12,16 @@ namespace StoresManagement.Migrations.EntityConfigurations
             .HasForeignKey(b => b.EntityId)
             .WillCascadeOnDelete(false);
 
-            //HasRequired(b => b.Contact)
-            //    .WithOptional(con => con.Branch)
-            //    .Map(b => b.MapKey("ContactId");
+            HasRequired(b => b.Contact)
+                .WithOptional(con => con.Branch)
+                .Map(b => b.MapKey("ContactId"));
 
             //HasRequired(t => t.Contact)
             //.WithOptional(t => t.Branch);
 
-            HasRequired(t => t.Contact)
-                .WithMany()
-                .HasForeignKey(t => t.ContactId);
+            //HasRequired(t => t.Contact)
+            //    .WithMany()
+            //    .HasForeignKey(t => t.ContactId);
         }
     }
 }

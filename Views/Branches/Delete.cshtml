@@ -13,14 +13,6 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Contact.AddressCountry)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Contact.AddressCountry)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Entity.EntityName)
         </dt>
 
@@ -43,10 +35,10 @@
         <dd>
             @Html.DisplayFor(model => model.Name)
         </dd>
-
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">

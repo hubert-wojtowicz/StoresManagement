@@ -17,7 +17,7 @@ namespace StoresManagement.Controllers
         // GET: Branches
         public ActionResult Index()
         {
-            var branches = db.Branches.Include(b => b.Contact).Include(b => b.Entity);
+            var branches = db.Branches.Include(b => b.Entity);
             return View(branches.ToList());
         }
 
@@ -39,7 +39,6 @@ namespace StoresManagement.Controllers
         // GET: Branches/Create
         public ActionResult Create()
         {
-            ViewBag.ContactId = new SelectList(db.Contacts, "Id", "AddressCountry");
             ViewBag.EntityId = new SelectList(db.Entities, "Id", "EntityName");
             return View();
         }
@@ -49,7 +48,6 @@ namespace StoresManagement.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //  public ActionResult Create([Bind(Include = "Id,EntityId,Identification,Name,ContactId")] Branch branch)
         public ActionResult Create(Branch branch)
         {
             if (ModelState.IsValid)
@@ -60,11 +58,9 @@ namespace StoresManagement.Controllers
                 db.Branches.Add(branch);
 
                 db.SaveChanges();
-
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ContactId = new SelectList(db.Contacts, "Id", "AddressCountry", branch.ContactId);
             ViewBag.EntityId = new SelectList(db.Entities, "Id", "EntityName", branch.EntityId);
             return View(branch);
         }
@@ -81,7 +77,6 @@ namespace StoresManagement.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ContactId = new SelectList(db.Contacts, "Id", "AddressCountry", branch.ContactId);
             ViewBag.EntityId = new SelectList(db.Entities, "Id", "EntityName", branch.EntityId);
             return View(branch);
         }
@@ -91,7 +86,7 @@ namespace StoresManagement.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,EntityId,Identification,Name,ContactId")] Branch branch)
+        public ActionResult Edit([Bind(Include = "Id,EntityId,Identification,Name")] Branch branch)
         {
             if (ModelState.IsValid)
             {
@@ -99,7 +94,6 @@ namespace StoresManagement.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ContactId = new SelectList(db.Contacts, "Id", "AddressCountry", branch.ContactId);
             ViewBag.EntityId = new SelectList(db.Entities, "Id", "EntityName", branch.EntityId);
             return View(branch);
         }
