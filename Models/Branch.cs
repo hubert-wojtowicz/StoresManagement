@@ -9,11 +9,11 @@ namespace StoresManagement.Models
 {
     public class Branch
     {
-        //public Branch()
-        //{
-        //    Products = new HashSet<Product>();
-        //    Purchases = new HashSet<Purchase>();
-        //}
+        public Branch()
+        {
+            //Products = new HashSet<Product>();
+            //Purchases = new HashSet<Purchase>();
+        }
 
         public int EntityId { get; set; }
 

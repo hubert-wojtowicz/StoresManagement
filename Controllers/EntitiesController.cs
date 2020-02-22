@@ -46,7 +46,7 @@ namespace StoresManagement.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,EntityName")] Entity entity)
+        public ActionResult Create([Bind(Include = "Id,Name")] Entity entity)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace StoresManagement.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,EntityName")] Entity entity)
+        public ActionResult Edit([Bind(Include = "Id,Name")] Entity entity)
         {
             if (ModelState.IsValid)
             {

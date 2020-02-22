@@ -39,7 +39,7 @@ namespace StoresManagement.Controllers
         // GET: Branches/Create
         public ActionResult Create()
         {
-            ViewBag.EntityId = new SelectList(db.Entities, "Id", "EntityName");
+            ViewBag.EntityId = new SelectList(db.Entities, "Id", "Name");
             return View();
         }
 
@@ -61,7 +61,7 @@ namespace StoresManagement.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.EntityId = new SelectList(db.Entities, "Id", "EntityName", branch.EntityId);
+            ViewBag.EntityId = new SelectList(db.Entities, "Id", "Name", branch.EntityId);
             return View(branch);
         }
 
@@ -77,7 +77,7 @@ namespace StoresManagement.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.EntityId = new SelectList(db.Entities, "Id", "EntityName", branch.EntityId);
+            ViewBag.EntityId = new SelectList(db.Entities, "Id", "Name", branch.EntityId);
             return View(branch);
         }
 
@@ -94,7 +94,7 @@ namespace StoresManagement.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.EntityId = new SelectList(db.Entities, "Id", "EntityName", branch.EntityId);
+            ViewBag.EntityId = new SelectList(db.Entities, "Id", "Name", branch.EntityId);
             return View(branch);
         }
 
